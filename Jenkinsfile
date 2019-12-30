@@ -13,7 +13,7 @@ pipeline{
         }
         stage ('dir change'){
             steps{
-                sh 'cd tests'
+                sh 'pwd'
             }
         }
         stage('run e2e test'){
