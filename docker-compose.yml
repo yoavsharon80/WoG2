@@ -1,8 +1,7 @@
 version: '3'
 services:
-  web:
+  wog2:
     build: .
     ports:
      - "8777:8777"
-  wog2:
     image: "python:alpine"
