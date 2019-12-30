@@ -21,5 +21,11 @@ pipeline{
                 sh 'python3 e2e.py'
             }
         }
+        stage('Docker tear down') {
+            steps {
+                sh 'docker-compose down'
+                sh 'docker rmi wog2_web'
+            }
+        }
     }
 }
