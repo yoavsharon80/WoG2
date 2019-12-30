@@ -11,9 +11,13 @@ pipeline{
                 sh 'docker-compose up &'
             }
         }
+        stage ('dir change'){
+            steps{
+                sh 'cd pwd/tests'
+            }
+        }
         stage('run e2e test'){
             steps {
-                sh 'cd tests'
                 sh 'python3 e2e.py'
             }
         }
