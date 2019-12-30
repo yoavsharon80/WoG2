@@ -18,7 +18,7 @@ def test_scores_service(app_url):
 
 
 # def main_function():
-status = test_scores_service("http://localhost:8777/")
+status = test_scores_service("http://0.0.0.0:8777/")
 print(status)
 if status == True:
     sys.exit(ExitStatus.success)
