@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps {
-                git 'https://github.com/yoavsharon80/day8.git' 
+                git 'https://github.com/yoavsharon80/WoG2.git' 
             }
         }
         stage('Docker Bring up') {
