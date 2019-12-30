@@ -13,7 +13,7 @@ pipeline{
         }
         stage('run e2e test'){
             steps {
-                sh 'python3 test\e2e.py'
+                sh 'python3 test/\e2e.py'
             }
         }
     }
