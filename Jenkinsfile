@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Docker Bring up') {
             steps {
-                sh 'docker-compose up'
+                sh 'docker-compose up &'
             }
         }
         stage('run e2e test'){
