@@ -18,7 +18,7 @@ pipeline{
         }
         stage('run e2e test'){
             steps {
-                sh 'python3 tests\\e2e.py'
+                sh 'python3 tests//e2e.py'
             }
         }
         stage('Docker tear down') {
