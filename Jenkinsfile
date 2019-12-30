@@ -13,12 +13,18 @@ pipeline{
         }
         stage ('dir change'){
             steps{
-                sh 'pwd'
+                sh 'cd pwd/tests'
             }
         }
         stage('run e2e test'){
             steps {
                 sh 'python3 e2e.py'
+            }
+        }
+        stage('remove Docker'){
+            steps{
+                sh 'docker-compose down'
+                sh 'docker rmi wog2_web'
             }
         }
     }
