@@ -9,6 +9,7 @@ pipeline{
         stage('Docker Bring up') {
             steps {
                 sh 'docker-compose up &'
+                   sh 'sleep 40'
             }
         }
         stage ('dir change'){
@@ -19,6 +20,7 @@ pipeline{
         stage('run e2e test'){
             steps {
                 sh 'python3 tests//e2e.py'
+                sh 'sleep 30'
             }
         }
         stage('Docker tear down') {
